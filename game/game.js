@@ -27,7 +27,9 @@ $(document).ready(function () {
         let top = parseInt(character.css("top"));
         let left = parseInt(enemy.css("left"));
         let totalWidth = $(window).width();
+        let totalHeight = $(window).height();
         let x = (left/totalWidth)*100;
+        let y = (top/totalHeight)*100;
 
 
 
@@ -36,10 +38,11 @@ $(document).ready(function () {
         console.log("top",top);
         console.log("left",left);
         console.log("x",x);
+        console.log("y",y);
 
 
 
-        if (top >= 337 && x <= 6 ) {
+        if (y >= 30 && x <= 6 ) {
             console.log("dead")
             // alert("GAME OVER !");
             score = 0;
