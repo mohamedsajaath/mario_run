@@ -35,7 +35,7 @@
 /* media query */
 
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 480px) {
     .poster{
         margin-top: 100px;
         height:100%;

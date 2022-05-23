@@ -9,6 +9,7 @@ $(document).ready(function () {
         character.addClass("animate");
         setTimeout((function () {
             character.removeClass("animate");
+            body.append(`<audio src="../audio/jump.wav" autoplay></audio>`);
         }), 500)
     });
 
