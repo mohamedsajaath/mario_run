@@ -13,14 +13,15 @@ $(document).ready(function () {
         }), 500)
     });
 
-    //   document.body.onkeypress = function(e){
-    //     if(e.keyCode == 32){
-    //         character.addClass("animate");
-    //         setTimeout((function(){
-    //             character.removeClass("animate");
-    //         } ),500)
-    //     }
-    // }
+      document.body.onkeypress = function(e){
+        if(e.keyCode == 32){
+            character.addClass("animate");
+        setTimeout((function () {
+            character.removeClass("animate");
+            body.append(`<audio src="../audio/jump.wav" autoplay></audio>`);
+        }), 500)
+        }
+    }
 
     setInterval(function () {
         let top = parseInt(character.css("top"));
@@ -29,7 +30,7 @@ $(document).ready(function () {
         console.log("top",top);
         console.log("left",left);
 
-        if (top >= 337 && left <= 39 || top >= 200 && left <= 100) {
+        if (top >= 337 && left <= 39 || top >= 358 && left <= 100) {
             console.log("dead")
             // alert("GAME OVER !");
             score = 0;
@@ -39,10 +40,7 @@ $(document).ready(function () {
             setTimeout((function(){
                 location.href='../index.html';
 
-            }),3000);
-            
-
-           
+            }),3000);   
         };
         if (left < 10) {
             score += 1;
@@ -70,6 +68,19 @@ $(document).ready(function () {
         }
     });
 
+
+    setTimeout((function(){
+     
+    $('.animateBlock').css("animation","block 2s infinite linear");
+
+    }),10000);   
+
+    setTimeout((function(){
+     
+        $('.animateBlock').css("animation","block 1s infinite linear");
+        $('.dragon').css("filter","grayscale(0%)");
+    
+        }),50000); 
 
 
 
