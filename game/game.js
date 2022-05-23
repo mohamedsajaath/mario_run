@@ -25,7 +25,11 @@ $(document).ready(function () {
     setInterval(function () {
         let top = parseInt(character.css("top"));
         let left = parseInt(block.css("left"));
-        if (top >= 337 && left <= 39) {
+
+        console.log("top",top);
+        console.log("left",left);
+
+        if (top >= 337 && left <= 39 || top >= 200 && left <= 100) {
             console.log("dead")
             // alert("GAME OVER !");
             score = 0;
