@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>game</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='game.css'>
+
+</head>
+
+<body onclick="playAudio()">
+    <button class="pause">
+        <i class="fa fa-pause pauseBtn" aria-hidden="true"></i>
+    </button>
+    <center>
+        <h3 class="score">SCORE</h3>
+    </center>
+    <center>
+        <h2 id="socreNum">000</h2>
+    </center>
+    <div class="game_base">
+        <div class="character" data-dead="1">
+            <img src="../images/mario.gif" alt="mario" class="mario">
+        </div>
+        <div class="block animateBlock" data-play="1">
+            <img src="../images/mtunnel.png" alt="tunnel" class="tunnel">
+        </div>
+
+    </div>
+
+    <img src="../images/backgroundgif.gif" alt="background" id="background">
+    <audio src="../audio/mario-theme.mp3" autoplay></audio>
+    <div id="cover"></div>
+    <a href="../index.html" id="back" ><i class="fa fa-undo" aria-hidden="true"></i></a>
+    <footer style="position:absolute; bottom:0px;">Copyright © MohamedSajaath (SIDS)</footer>
+    
+    <script src="https://use.fontawesome.com/01de1fe131.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src='game.js'></script>
+
+   
+</body>
+
+</html>

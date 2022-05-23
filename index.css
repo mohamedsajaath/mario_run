@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@100&family=Updock&display=swap');
+.poster{
+    height:100%;
+    width: 100%;
+}
+.play{
+    position: fixed;
+    bottom:9.5%;
+    right:0.6%;
+    font-size: 100px;
+    padding:10px;
+    border-radius: 40px 0px 0px 0px;
+    width: 500px;
+    height:200px;
+    border: none;
+    box-shadow: 0px 0px 100px rgb(116, 116, 116);
+    
+}
+.play:hover{
+    background-color: #FC2234;
+
+}
+.play a{
+    text-decoration: none;
+    color:rgb(54, 23, 23);
+    font-family: 'Playfair Display', serif;
+}
+.play a:hover{
+    color:rgb(255, 255, 255);
+    
+}
+
+
+
+/* media query */
+
+
+@media only screen and (max-width: 390px) {
+    .poster{
+        margin-top: 100px;
+        height:100%;
+        width: 100%;
+    }
+    .play{
+
+        border-radius: 0px 0px 0px 0px;
+        width:100%;
+
+        
+    }
+
+  }
