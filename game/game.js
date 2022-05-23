@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     let character = $('.character');
-    let block = $('.block');
+    let enemy = $('.block');
     let body = $('html');
     let score = 000;
 
@@ -25,12 +25,21 @@ $(document).ready(function () {
 
     setInterval(function () {
         let top = parseInt(character.css("top"));
-        let left = parseInt(block.css("left"));
+        let left = parseInt(enemy.css("left"));
+        let totalWidth = $(window).width();
+        let x = (left/totalWidth)*100;
+
+
+
+        
 
         console.log("top",top);
         console.log("left",left);
+        console.log("x",x);
 
-        if (top >= 337 && left <= 39 || top >= 358 && left <= 100) {
+
+
+        if (top >= 337 && x <= 6 ) {
             console.log("dead")
             // alert("GAME OVER !");
             score = 0;
