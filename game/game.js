@@ -26,8 +26,18 @@ $(document).ready(function () {
         let left = parseInt(block.css("left"));
         if (top >= 337 && left <= 39) {
             console.log("dead")
-            alert("GAME OVER !");
+            // alert("GAME OVER !");
             score = 0;
+            $('.block').removeClass("animateBlock");
+            body.append(`<audio src="../audio/smb_gameover.wav" autoplay></audio>`);
+            body.append(`<audio src="../audio/dead.wav" autoplay></audio>`);
+            setTimeout((function(){
+                location.href='../index.html';
+
+            }),3000);
+            
+
+           
         };
         if (left < 10) {
             score += 1;
@@ -71,7 +81,7 @@ $(document).ready(function () {
 
 
 
-
+    
 
 
 
